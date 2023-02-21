@@ -1,0 +1,18 @@
+import re
+def match_pattern(string):
+  pattern = "A*B*C"
+  result = re.match(pattern, string)
+  if result:
+    return  "Match Found"
+  else:
+    return "Match not Found"
+
+print(match_pattern("ABC"))
+
+
+#Examples
+#A*B*C - ABC(M)
+#A*B*C - ABBABBA(NM)
+#A*B   - AB(M)
+#A*B   - AWB(NM)
+#A*B   - AMNB(NM)
